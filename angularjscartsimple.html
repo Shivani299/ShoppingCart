@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"> </script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script>
+    	var app = angular.module('kartmart', []);
+app.controller('kartmart-controller', function($scope) {
+    $scope.supernatural = 0;
+    $scope.got = 0;
+    $scope.friends = 0;
+    $scope.bb = 0;
+    $scope.simpsons = 0;
+    $scope.ac = 0;
+    $scope.dexter = 0;
+    $scope.office = 0;
+    $scope.total=0;
+    $scope.total = function() 
+    {
+    	}
+
+});
+    </script>
+    <style>
+table, th, td {
+    border: 1px solid black;
+    width:1200px;
+    margin-left: 100px;
+    float:center;
+    text-align:center;
+}
+</style>
+</head>
+<body>
+<h1 style="font-weight:bold;float:center;text-align:center; font-size:80px; background-color: black;color:white">KARTMART</h1><br>
+<div ng-app="kartmart" ng-controller="kartmart-controller">
+<div class="container-fluid">
+			<div style="font-weight:bold ; font-size:20px">
+			<div class="row">
+				<div class="col-3">
+					<center><img src="img1.jpg" class="img-thumbnail" alt="Supernatural T-Shirt" style="width:400px;height:270px"> </center><br>
+				</div>
+				<div class="col-3">
+					<center><img src="img2.jpg" class="img-thumbnail" alt="Game of Thrones T-Shirt" style="width:400px;height:270px"></center><br>
+				</div>
+				<div class="col-3">
+					<center><img src="img3.jpg" class="img-thumbnail" alt="Friends T-Shirt" style="width:400px;height:270px"></center><br>
+				</div>
+				<div class="col-3">
+					<center><img src="img4.jpg" class="img-thumbnail" alt="Breaking Bad T-Shirt" style="width:400px;height:270px"></center>
+				</div>
+				<br>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<center>Supernatural T-Shirt</center>
+					<p><center>Rs 800 </center></p>
+					<div class="row" >
+						<div class="col-3" style="margin-left:85px;">
+					<button style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px ;" ng-click="supernatural=supernatural-1;">-</button>
+				</div>
+				<div class="col-3" style="border:1px black solid;float:center;text-align:center;height:30px;width:25px;margin-left:-40px;margin-top:10px">
+					<div  ng-if="supernatural < 0">
+						{{supernatural=0}}
+					</div>
+					<div  ng-if="supernatural >= 0">
+				<p> {{supernatural}} </p>
+							</div>
+						</div>
+			<div class="col-3"><button id="ta" ng-click="supernatural=supernatural+1;" style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px;margin-left:-10px">+</button>
+			</div>
+				</div>
+				</div>
+				<div class="col-3">
+					<center>Game of Thrones T-Shirt </center>
+					<p><center>Rs 750 </center></p>
+					<div class="row">
+						<div class="col-3" style="margin-left:85px; ">
+					<button style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px ;text-align: center;float:center;" ng-click="got=got-1;" >-</button>
+				</div>
+				<div class="col-3" style="border:1px black solid;float:center;text-align:center;height:30px;width:25px;margin-left:-40px;margin-top:10px">
+				<div  ng-if="got < 0" ng-init={got>
+
+						{{got=0}}
+					</div>
+					<div  ng-if="got >= 0">
+				<p> {{got}} </p>
+							</div>
+							</div>
+			<div class="col-3"><button id="ta" ng-click="got=got+1;" style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px; margin-left:-20px">+</button>
+			</div>
+				</div>
+				</div>
+				<div class="col-3">
+					<center>Friends T-Shirt </center>
+					<p><center>Rs 450 </center></p>
+					<div class="row" >
+						<div class="col-3" style="margin-left:90px;">
+					<button style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px ; " ng-click="friends=friends-1">-</button>
+				</div>
+				<div class="col-3" style="border:1px black solid;float:center;text-align:center;height:30px;width:25px;margin-left:-40px;margin-top:10px">
+				<div  ng-if="friends < 0">
+						{{friends =0}}
+					</div>
+					<div  ng-if="friends >= 0">
+				<p> {{friends}} </p>
+							</div>
+							</div>
+			<div class="col-3"><button id="ta" ng-click="friends=friends+1" style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px; margin-left:-20px">+</button>
+			</div>
+				</div>
+				</div>
+				<div class="col-3">
+					<center>Breaking Bad T-Shirt </center>
+					<p><center>Rs 550 </center></p>
+					<div class="row">
+						<div class="col-3" style="margin-left:90px;">
+					<button style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px ; " ng-click="bb=bb-1">-</button>
+				</div>
+				<div class="col-3" style="border:1px black solid;float:center;text-align:center;height:30px;width:25px;margin-left:-40px;margin-top:10px">
+				<div  ng-if="bb < 0">
+						{{bb=0}}
+					</div>
+					<div  ng-if="bb >= 0">
+				<p> {{bb}} </p>
+							</div>
+							</div>
+			<div class="col-3"><button id="ta" ng-click="bb=bb+1" style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px; margin-left:-20px">+</button>
+			</div>
+				</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-3">
+					<center><img src="img5.jpg" class="img-thumbnail" alt="TOMATOES" style="width:400px;height:270px"> </center>
+				</div>
+				<div class="col-3">
+					<center><img src="img6.jpg" class="img-thumbnail" alt="CARROTS" style="width:400px;height:270px"> </center>
+				</div>
+				<div class="col-3">
+					<center><img src="img7.jpg" class="img-thumbnail" alt="BROCCOLI" style="width:400px;height:270px"> </center>
+				</div>
+				<div class="col-3">
+					<center><img src="img8.jpg" class="img-thumbnail" alt="GINGER" style="width:400px;height:270px"> </center>
+				</div>
+			</div>
+			<div class="row" >
+				<div class="col-3">
+					<center>Simpsons T-Shirt </center>
+					<p><center>Rs 350 </center></p>
+					<div class="row" style="margin-left:40px">
+						<div class="col-3" style="margin-left:40px;">
+					<button style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px;margin-left:-10px; " ng-click="simpsons=simpsons-1">-</button>
+				</div>
+				<div class="col-3" style="border:1px black solid;float:center;text-align:center;height:30px;width:25px;margin-left:-40px;margin-top:10px">
+				<div  ng-if="simpsons < 0">
+						{{simpsons=0}}
+					</div>
+					<div  ng-if="simpsons >= 0">
+				<p> {{simpsons}} </p>
+							</div>
+							</div>
+			<div class="col-3"><button id="ta" ng-click="simpsons=simpsons+1" style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px; margin-left:-20px">+</button>
+			</div>
+				</div>
+				</div>
+				<div class="col-3">
+					<center>Altered Carbon T-Shirt </center>
+					<p><center>Rs 550 </center></p>
+					<div class="row" style="margin-left:40px">
+						<div class="col-3" style="margin-left:40px;">
+					<button style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px ; margin-left:-10px;" ng-click="ac=ac-1">-</button>
+				</div>
+				<div class="col-3" style="border:1px black solid;float:center;text-align:center;height:30px;width:25px;margin-left:-40px;margin-top:10px">
+				<div  ng-if="ac < 0">
+						{{ac=0}}
+					</div>
+					<div  ng-if="ac >= 0">
+				<p> {{ac}} </p>
+							</div>
+							</div>
+			<div class="col-3"><button id="ta" ng-click="ac=ac+1" style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px; margin-left:-20px">+</button>
+			</div>
+				</div>
+				</div>
+				<div class="col-3">
+					<center>Dexter T-Shirt </center>
+					<p><center>Rs 450 </center></p>
+					<div class="row" style="margin-left:60px">
+						<div class="col-3" style="margin-left:40px;">
+					<button style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px ;margin-left:-10px;" ng-click="dexter=dexter-1">-</button>
+				</div>
+				<div class="col-3" style="border:1px black solid;float:center;text-align:center;height:30px;width:25px;margin-left:-40px;margin-top:10px">
+				<div  ng-if="dexter < 0">
+						{{dexter=0}}
+					</div>
+					<div  ng-if="dexter >= 0">
+				<p> {{dexter}} </p>
+							</div>
+							</div>
+			<div class="col-3"><button id="ta" ng-click="dexter=dexter+1" style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px; margin-left:-20px">+</button>
+			</div>
+				</div>
+				</div>
+				<div class="col-3">
+					<center>The Office T-Shirt </center>
+					<p><center>Rs 650 </center></p>
+					<div class="row" style="margin-left:60px">
+						<div class="col-3" style="margin-left:40px;">
+					<button style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px ;margin-left:-10px;" ng-click="office=office-1">-</button>
+				</div>
+				<div class="col-3" style="border:1px black solid;float:center;text-align:center;height:30px;width:25px;margin-left:-40px;margin-top:10px">
+				<div  ng-if="office < 0" >
+						{{office=0}}
+					</div>
+					<div  ng-if="office >= 0">
+				<p> {{office}} </p>
+							</div>
+							</div>
+			<div class="col-3"><button id="ta" ng-click="office=office+1" style="background-color: transparent; border:none ; height:20px ; width:20px; font-size:30px; margin-left:-20px">+</button>
+			</div>
+				</div>
+				</div>
+			</div>
+		</div>
+</div>
+<hr style="color:black;background-color:black">
+<br>
+<h4 style='text-align:center;background-color: black;color:white;font-weight:77; width:1000px; margin-left:200px'>CART : </h4><br>
+<div class="container-fluid" >
+			<div class="row" style="font-size:20px; font-family:'Roboto'">
+				<div class="col-3">
+					<center><u>Items</center></u>
+				</div>
+				<div class="col-3">
+					<center><u>Quantity</center></u>
+				</div>
+				<div class="col-3">
+					<center><u>Price Per Item</u></center>
+				</div>
+				<div class="col-3">
+					<center><u>Total price</u></center>
+				</div>
+				<br>
+			</div>
+			<div class="row" style="font-size:15px; font-family:'Roboto'">
+				<div class="col-3">
+					<div  ng-if="supernatural > 0">
+						<center>Supernatural T-Shirt</center>
+					</div>
+					<div  ng-if="got > 0">
+						<center>Game Of Thrones T-Shirt</center>
+					</div>
+					<div  ng-if="friends > 0">
+						<center>Friends T-Shirt</center>
+					</div>
+					<div  ng-if="bb > 0">
+						<center>Breaking Bad T-Shirt</center>
+					</div>
+					<div  ng-if="simpsons > 0">
+						<center>Simpsons T-Shirt</center>
+					</div>
+					<div  ng-if="ac > 0">
+						<center>Altered Carbon T-Shirt</center>
+					</div><div  ng-if="dexter > 0">
+						<center>Dexter T-Shirt</center>
+					</div><div  ng-if="office > 0">
+						<center>Office</center>
+					</div>
+				</div>
+				<div class="col-3">
+					<div  ng-if="supernatural > 0">
+						<center>{{supernatural}}</center>
+
+					</div>
+					<div  ng-if="got > 0">
+						<center>{{got}}</center>
+					</div>
+					<div  ng-if="friends > 0">
+						<center>{{friends}}</center>
+					</div>
+					<div  ng-if="bb > 0">
+						<center>{{bb}}</center>
+					</div>
+					<div  ng-if="simpsons > 0">
+						<center>{{simpsons}}</center>
+					</div>
+					<div  ng-if="ac > 0">
+						<center>{{ac}}</center>
+					</div><div  ng-if="dexter > 0">
+						<center>{{dexter}}</center>
+					</div><div  ng-if="office > 0">
+						<center>{{office}}</center>
+					</div>
+				</div>
+				<div class="col-3">
+					<div  ng-if="supernatural > 0">
+						<center>{{850}}</center>
+					</div>
+					<div  ng-if="got > 0">
+						<center>{{750}}</center>
+					</div>
+					<div  ng-if="friends > 0">
+						<center>{{450}}</center>
+					</div>
+					<div  ng-if="bb > 0">
+						<center>{{550}}</center>
+					</div>
+					<div  ng-if="simpsons > 0">
+						<center>{{350}}</center>
+					</div>
+					<div  ng-if="ac > 0">
+						<center>{{550}}</center>
+					</div><div  ng-if="dexter > 0">
+						<center>{{450}}</center>
+					</div><div  ng-if="office > 0">
+						<center>{{650}}</center>
+					</div>
+				</div>
+				<div class="col-3">
+					<div  ng-if="supernatural > 0">
+						<center>{{supernatural * 850}}</center>
+					</div>
+					<div  ng-if="got > 0">
+						<center>{{got*750}}</center>
+					</div>
+					<div  ng-if="friends > 0">
+						<center>{{friends * 450}}</center>
+					</div>
+					<div  ng-if="bb > 0">
+						<center>{{bb * 550}}</center>
+					</div>
+					<div  ng-if="simpsons > 0">
+						<center>{{simpsons * 350}}</center>
+					</div>
+					<div  ng-if="ac > 0">
+						<center>{{ac * 550}}</center>
+					</div><div  ng-if="dexter > 0">
+						<center>{{dexter * 450}}</center>
+					</div><div  ng-if="office > 0">
+						<center>{{office * 650}}</center>
+					</div>
+				</div>
+				<br>
+			</div>
+</div>
+<br>
+<h5><center> CART TOTAL :  {{supernatural * 850 + got*750 + friends * 450 +bb * 550 +simpsons * 350 +ac * 550+dexter * 450+office * 650}}</center></h5>
+</div>
+</body>
+</html>
